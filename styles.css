@@ -1,3 +1,8 @@
+font {
+    font-family: jet;
+    src: url(fonts/JetBrainsMono-Medium.ttf);
+    font-display: swap;
+}
 * {
     margin: 0;
     padding: 0;
@@ -23,7 +28,7 @@ header {
 }
 
 .container {
-    padding: 10px 10%;
+    padding: 15px 10%;
 }
 
 .logo {
@@ -40,37 +45,54 @@ nav ul li {
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
+    font-size: 20px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: black;
+    position: relative;
 }
+nav ul li a:hover {
+    color: #007404;
+    text-shadow: 3px 3px 20px rgb(121, 178, 120);
+    transition: all 0.6s;
+  }
+  
 
 .header_text {
-    margin-top: 70px;
-    font-size: 30px
+    margin-top: 100px;
+    font-size: 20px
 }
 
 .header_text h1 {
-    font-size: 50px;
-}
+    font-size: 70px;
+    padding-bottom: 15px;
+    font-family: 'Courier New', Courier, monospace;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 2s steps(45);
+    }
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 75%;
+        }
+    }
 
-
-/*---about---*/
-#about {
-    padding: 80px 0;
-}
-row{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.acol2 {
-    flex-basis: 60%;
-}
-
-.sub-title {
-    font-size: 60px;
-    font-weight: 600;
-}
+.header_text p {
+    font-family: monospace;
+    overflow: hidden;
+        white-space: nowrap;
+        animation: typing 1.5s steps(50);
+    }
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    }
